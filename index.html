@@ -12,6 +12,13 @@ function initialize() {
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+var markerOptions = {
+    position: new google.maps.LatLng(37.7831, -122.4039)
+};
+var marker = new google.maps.Marker(markerOptions);
+marker.setMap(map);
 </script>
 </head>
 
