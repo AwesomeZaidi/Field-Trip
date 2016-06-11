@@ -1,6 +1,4 @@
-var map;
 function initMap() {
-<<<<<<< HEAD
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 41.892941, lng: -87.624923},
     zoom: 18
@@ -14,36 +12,30 @@ function initMap() {
     position: myLatLng,
     title: 'Hello World!'
   });
-=======
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 39.5, lng: -98.35},
-    zoom: 8
-  });
->>>>>>> e6114687f2e24d4a488313415a9774fe605152bf
 
-}
-var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
-var mapOptions = {
-  zoom: 4,
-  center: myLatlng
-}
-var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-var infoWindow = new google.maps.InfoWindow({map: map});
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
 
-<<<<<<< HEAD
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Location found.');
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+}
+
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(browserHasGeolocation ?
                         'Your Location' :
                         'Your Location');
 }
-=======
-var marker = new google.maps.Marker({
-    position: myLatlng,
-    title:"Hello World!"
-});
-
-// To add the marker to the map, call setMap();
-marker.setMap(map);
-}
->>>>>>> e6114687f2e24d4a488313415a9774fe605152bf
