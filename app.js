@@ -4,6 +4,12 @@ function initMap() {
     zoom: 6
   });
   var infoWindow = new google.maps.InfoWindow({map: map});
+  var myLatLng = {lat: 37.09024, lng: -95.712891};
+  //creates marker
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
 
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
