@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
@@ -53,16 +53,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#portfolio"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact"></a>
                     </li>
                 </ul>
             </div>
@@ -73,12 +73,11 @@
 
     <header>
         <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Your Favorite Source of Free Bootstrap Themes</h1>
-                <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-            </div>
+            <div id="map"></div>
+            <!--<div class="header-content-inner">
+                <h1></h1>
+                <p></p>
+            </div>-->
         </div>
     </header>
 
@@ -278,6 +277,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script src="js/map.js"></script>
 
 </body>
 

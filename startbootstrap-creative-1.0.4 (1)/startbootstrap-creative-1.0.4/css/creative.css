@@ -405,3 +405,7 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+#map{
+  height: 100%;
+  margin: 0;
+}
