@@ -1,39 +1,22 @@
+var map;
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 37.09024, lng: -95.712891},
-    zoom: 6
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 39.5, lng: -98.35},
+    zoom: 8
   });
-  var infoWindow = new google.maps.InfoWindow({map: map});
-  var myLatLng = {lat: 37.09024, lng: -95.712891};
-  //creates marker
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Hello World!'
-
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
-      map.setCenter(pos);
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
 }
+var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+var mapOptions = {
+  zoom: 4,
+  center: myLatlng
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
+var marker = new google.maps.Marker({
+    position: myLatlng,
+    title:"Hello World!"
+});
+
+// To add the marker to the map, call setMap();
+marker.setMap(map);
 }
