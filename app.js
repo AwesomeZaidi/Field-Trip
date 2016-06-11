@@ -8,7 +8,7 @@ function initMap() {
 
   var infoWindow = new google.maps.InfoWindow({map: map});
    
-  var myLatLng = {lat: 41.892941, lng: -87.624923};
+  var myLatLng_0 = {lat: 41.892941, lng: -87.624923};
   var myLatLng_1 = {lat: 41.892941, lng: -87.624923};
   var myLatLng_2 = {lat: 41.892941, lng: -87.624923};
   var myLatLng_3 = {lat: 41.892941, lng: -87.624923};
@@ -18,7 +18,7 @@ function initMap() {
 
   var marker_hackathon = new google.maps.Marker({
     map: map,
-    position: myLatLng,
+    position: myLatLng_0,
     title: 'Hello World!'
   });
    
@@ -37,6 +37,12 @@ function initMap() {
       'here</a>' +
       '</div>'+
       '</div>';
+  var contentString = '<p></p>'
+  var contentString = 
+  var contentString =  
+  var contentString = 
+  var contentString = 
+  var contentString = 
 
   var infowindow = new google.maps.InfoWindow({
     content: contentString
