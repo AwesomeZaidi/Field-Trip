@@ -25,9 +25,10 @@ function initMap() {
   var contentString = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h1 id="firstHeading" class="firstHeading">AT&T Mobile App Hackathon (Smart City) - Bay Area</h1>'+
+      '<h1 id="firstHeading" class="firstHeading">AT&T Smart City Hackathon @ AT&T Store (Chicago)</h1>'+
       '<div id="bodyContent">'+
-      '<p>Join us for a special Smart City Mobile App Hackathon, produced by the AT&T Developer  ' +
+      '<p> Friday, June 10, 2016 at 6:00 PM - Saturday, June 11, 2016 at 9:00 PM (CDT) Chicago, IL' +
+      'Join us for a special Smart City Mobile App Hackathon, produced by the AT&T Developer  ' +
       'Program. Hangout with us as we hack and build apps/mobile apps, get fed, compete for prizes  '+
       'across different categories and most importantly: meet new people and scout for teammates to  '+
       'work on new or current projects. We will have experts from AT&T and the local community  '+
